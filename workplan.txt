@@ -1,0 +1,36 @@
+Needed classes for current version:
+
+Faction (parent class, possibly different types later)
+Attributes:
+String factionName
+int money
+int income
+Unit[] units
+
+Location (parent class, later children different kinds, towns ruins)
+Attributes:
+Faction ControlledBy
+
+Unit (parent class, later children different kinds, troop, explorer, caravan)
+Attributes:
+HexCoordinate location
+int movementRate
+
+
+Turn logic:
+Determine actions for the faction
+	-build unit?
+		-YES: check for enough money
+			-YES: createUnit()
+		-NO: do nothing 
+Determine actions for active units
+	-move
+	-interact
+
+Determine if an action triggers
+	-YES: what kind?
+		-location, unit or environment?
+		-resolve 
+	-NO: do nothing
+
+Add income to faction's money. 
