@@ -5,6 +5,8 @@ public class HexCell : MonoBehaviour
 {
     public HexCoordinates coordinates;
 
+    public RectTransform uiRect;
+
     public Color color;
 
     [SerializeField]

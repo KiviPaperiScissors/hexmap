@@ -15,8 +15,8 @@ public class HexGrid : MonoBehaviour
 
     public Text cellLabelPrefab;
 
-    Canvas gridCanvas;
-    HexMesh hexMesh;
+    // Canvas gridCanvas;
+    // HexMesh hexMesh;
 
     public Color defaultColor = Color.white;
 
@@ -25,7 +25,8 @@ public class HexGrid : MonoBehaviour
 
     private void Awake()
     {
-
+     //   gridCanvas = GetComponentInChildren<Canvas>();
+     //   hexMesh = GetComponentInChildren<HexMesh>();
 
         cellCountX = chunkCountX * HexMetrics.chunkSizeX;
         cellCountZ = chunkCountZ * HexMetrics.chunkSizeZ;
@@ -34,26 +35,21 @@ public class HexGrid : MonoBehaviour
         CreateCells();
     }
 
-    void CreateChunks ()
-    {
-        void CreateChunks()
-        {
-            chunks = new HexGridChunk[chunkCountX * chunkCountZ];
+    void CreateChunks () {
+         chunks = new HexGridChunk[chunkCountX * chunkCountZ];
 
-            for (int z= 0, i=0; z < chunkCountZ; z++)
-            {
-                for (int x = 0; x < chunkCountX; x++)
-                {
-                    HexGridChunk chunk = chunks[i++] = Instantiate(chunkPrefab);
-                    chunk.transform.SetParent(transform);
-                }
-            }
-        }
+         for (int z= 0, i=0; z < chunkCountZ; z++) {
+             for (int x = 0; x < chunkCountX; x++) {
+                HexGridChunk chunk = chunks[i++] = Instantiate(chunkPrefab);
+                chunk.transform.SetParent(transform);
+              }
+          }
+        
     }
 
     void CreateCells()
     {
-        cells = new HexCell[chunkCountZ * cellCountX];
+        cells = new HexCell[cellCountZ * cellCountX];
 
         for(int z = 0, i=0; z < cellCountZ; z++)
         {
@@ -75,10 +71,10 @@ public class HexGrid : MonoBehaviour
         
     }
 
-    public void Refresh ()
-    {
-        hexMesh.Triangulate(cells);
-    }
+    //public void Refresh ()
+    //{
+    //    hexMesh.Triangulate(cells);
+    //}
 
     void CreateCell (int x, int z, int i)
     {
@@ -105,7 +101,7 @@ public class HexGrid : MonoBehaviour
                 {
                     cell.SetNeighbor(HexDirection.SW, cells[i - cellCountX - 1]);
                 }
-            }
+            } 
             else
             {
                 cell.SetNeighbor(HexDirection.SW, cells[i - cellCountX]);
@@ -118,6 +114,7 @@ public class HexGrid : MonoBehaviour
         Text label = Instantiate<Text>(cellLabelPrefab);
         label.rectTransform.anchoredPosition = new Vector2(position.x, position.z);
         label.text = cell.coordinates.ToStringOnSeparateLines();
+        cell.uiRect = label.rectTransform;
 
         AddCellToChunk(x, z, cell);
     }

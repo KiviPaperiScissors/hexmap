@@ -25,6 +25,7 @@ public class HexGridChunk : MonoBehaviour
     {
         cells[index] = cell;
         cell.transform.SetParent(transform, false);
+        cell.uiRect.SetParent(gridCanvas.transform, false);
         
     }
 
