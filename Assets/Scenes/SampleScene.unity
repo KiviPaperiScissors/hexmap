@@ -1499,7 +1499,8 @@ MonoBehaviour:
   cellLabelPrefab: {fileID: 5851565879191634882, guid: 02a023513ebbf024fbc34978fdcd851a,
     type: 3}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  chunkPrefab: {fileID: 0}
+  chunkPrefab: {fileID: 4262300524191141572, guid: 513118cb9ce7aa141a5cafbb8b979f30,
+    type: 3}
 --- !u!4 &1392602034
 Transform:
   m_ObjectHideFlags: 0
@@ -1839,7 +1840,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732739461}
   m_LocalRotation: {x: -0, y: 0.0014680028, z: -0, w: 0.999999}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1045966087}
@@ -1851,7 +1852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0.16800001, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -542, y: 217.6}
+  m_AnchoredPosition: {x: -438.8, y: 216.1}
   m_SizeDelta: {x: -1084, y: -435.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732739463
