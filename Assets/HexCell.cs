@@ -10,6 +10,9 @@ public class HexCell : MonoBehaviour
 
     public RectTransform uiRect;
     public Image cellIconPrefab;
+    
+
+    public HexGridChunk chunk;
 
     public Color Color
     {
@@ -49,17 +52,22 @@ public class HexCell : MonoBehaviour
             if (hasTown)
             {
                 Debug.Log("town value is set");
-                icon = Instantiate<Image>(cellIconPrefab);
-                icon.rectTransform.anchoredPosition3D = 
-                    new Vector3(worldPosition.x, 1f, worldPosition.z);
-                Refresh();
                 
+                icon = Instantiate<Image>(cellIconPrefab);
+                icon.rectTransform.anchoredPosition3D =
+                    new Vector3(worldPosition.x, 0.2f, worldPosition.z);
+                icon.transform.SetParent(transform, true);
+                icon.rectTransform.SetParent(chunk.GridCanvas.transform, true);
+
+                // chunk.AddIcon(this);
+
+
 
             } else
             {
-                Debug.Log("destroying icon");
+                Debug.Log("trying to destroy icon");
                 Destroy(icon);
-                Refresh();
+                
             }
             
         }
@@ -72,7 +80,7 @@ public class HexCell : MonoBehaviour
     [SerializeField]
     HexCell[] neighbors;
 
-    public HexGridChunk chunk;
+    
 
     public HexCell GetNeighbor (HexDirection direction)
     {
