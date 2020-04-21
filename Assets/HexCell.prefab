@@ -46,7 +46,10 @@ MonoBehaviour:
   coordinates:
     x: 0
     z: 0
-  color: {r: 0, g: 0, b: 0, a: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  uiRect: {fileID: 0}
+  cellIconPrefab: {fileID: 5990814083605819952, guid: 67b98723fe1b3db4b86c5c1fb8b47a00,
+    type: 3}
   neighbors:
   - {fileID: 0}
   - {fileID: 0}
@@ -54,3 +57,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  chunk: {fileID: 0}

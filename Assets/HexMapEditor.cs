@@ -32,17 +32,48 @@ public class HexMapEditor : MonoBehaviour
         if (Physics.Raycast(inputRay, out hit))
         {
             EditCell(hexGrid.GetCell(hit.point));
+           
         }
     }
 
+    bool applyColor;
+
+
     void EditCell (HexCell cell)
     {
-        cell.Color = activeColor;
+        if (applyColor)
+        {
+            cell.Color = activeColor;
+        }
+        
+        if (buildTown)
+        {
+            cell.HasTown = true;
+        } else
+        {
+            cell.HasTown = false;
+        }
+        
+
      //    hexGrid.Refresh();
     }
 
     public void SelectColor (int index)
     {
-        activeColor = colors[index];
+        applyColor = index >= 0;
+        if (applyColor)
+        {
+            activeColor = colors[index];
+        }
     }
+
+    bool buildTown;
+
+    public void SetBuildTown(bool toggle)
+    {
+        Debug.Log("Build Town set to" + toggle);
+        buildTown = toggle;
+    }
+
+
 }

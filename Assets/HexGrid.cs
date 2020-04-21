@@ -11,9 +11,14 @@ public class HexGrid : MonoBehaviour
 
     public HexCell cellPrefab;
 
+
     HexCell[] cells;
 
+
     public Text cellLabelPrefab;
+    public Image cellIconPrefab;
+
+    // public Image blankPrefab;
 
     // Canvas gridCanvas;
     // HexMesh hexMesh;
@@ -22,6 +27,8 @@ public class HexGrid : MonoBehaviour
 
     public HexGridChunk chunkPrefab;
     HexGridChunk[] chunks;
+
+    HexCell[] hasTowns;
 
     private void Awake()
     {
@@ -60,7 +67,7 @@ public class HexGrid : MonoBehaviour
         }
     }
 
-
+    
     
     public HexCell GetCell(Vector3 position)
     {
@@ -85,6 +92,8 @@ public class HexGrid : MonoBehaviour
 
         HexCell cell = cells[i] = Instantiate<HexCell>(cellPrefab);
         cell.transform.localPosition = position;
+        cell.worldPosition = position;
+
         cell.coordinates = HexCoordinates.FromOffsetCoordinates(x, z);
         cell.Color = defaultColor;
 
@@ -115,6 +124,11 @@ public class HexGrid : MonoBehaviour
         label.rectTransform.anchoredPosition = new Vector2(position.x, position.z);
         label.text = cell.coordinates.ToStringOnSeparateLines();
         cell.uiRect = label.rectTransform;
+
+        //Image icon = Instantiate<Image>(cellIconPrefab);
+        //icon.rectTransform.anchoredPosition = new Vector2(position.x, position.z);
+        //cell.uiRect = icon.rectTransform;
+
 
         AddCellToChunk(x, z, cell);
     }
