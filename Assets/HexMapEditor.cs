@@ -8,6 +8,8 @@ public class HexMapEditor : MonoBehaviour
 
     public HexGrid hexGrid;
 
+    public HexUnit unitPrefab; 
+
     private Color activeColor;
 
     private void Awake()
@@ -17,24 +19,62 @@ public class HexMapEditor : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) &&
-            !EventSystem.current.IsPointerOverGameObject())
+
+
+
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            HandleInput();
-            
+            if (Input.GetMouseButton(0) &&
+                !EventSystem.current.IsPointerOverGameObject())
+            {
+                HandleInput();
+                return;
+            }
+
+            if(Input.GetKeyDown(KeyCode.U))
+            {
+                CreateUnit();
+                return;
+            }
         }
     }
 
     void HandleInput()
     {
+        HexCell currentCell = GetCellUnderCursor();
+        if (currentCell)
+        {
+            {
+                EditCell(currentCell);
+
+            }
+        }
+    }
+
+    HexCell GetCellUnderCursor()
+    {
         Ray inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(inputRay, out hit))
         {
-            EditCell(hexGrid.GetCell(hit.point));
-           
+            return hexGrid.GetCell(hit.point);
+
+        }
+        return null;
+    }
+
+    void CreateUnit ()
+    {
+        HexCell cell = GetCellUnderCursor();
+        if (cell)
+        {
+            HexUnit unit = Instantiate(unitPrefab);
+            unit.transform.SetParent(hexGrid.transform, false);
+            unit.Location = cell;
+            unit.Orientation = Random.Range(0f, 360f);
         }
     }
+
 
     bool applyColor;
 

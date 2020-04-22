@@ -1,12 +1,41 @@
 ﻿
 using UnityEngine.UI;
 using UnityEngine;
+using System.Collections.Generic;
 
 
 public class HexCell : MonoBehaviour
 {
     public HexCoordinates coordinates;
     public Vector3 worldPosition;
+
+    public List<HexUnit> units;
+    public HexUnit Unit
+    {
+        get { return Unit; }
+
+        set
+        {
+            units.Add(value);
+            if (units.Count > 1)
+            {
+                Debug.Log("Units in List:" + units.Count);
+                for (var i = 0; i < units.Count; i++)
+                {
+                    units[i].OffsetLocation(i);
+                }
+            }
+            
+        }
+    }
+
+    public Vector3 Position
+    {
+        get
+        {
+            return transform.localPosition;
+        }
+    }
 
     public RectTransform uiRect;
     public Image cellIconPrefab;
