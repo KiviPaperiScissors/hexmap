@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 
 public class HexGrid : MonoBehaviour
@@ -10,6 +11,7 @@ public class HexGrid : MonoBehaviour
     int cellCountX, cellCountZ;
 
     public HexCell cellPrefab;
+    List<HexUnit> units = new List<HexUnit>();
 
 
     HexCell[] cells;
@@ -76,6 +78,16 @@ public class HexGrid : MonoBehaviour
         int index = coordinates.X + coordinates.Z * cellCountX + coordinates.Z / 2;
         return cells[index];
         
+    }
+
+    public HexCell GetCell(Ray ray)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            return GetCell(hit.point);
+        }
+        return null;
     }
 
     //public void Refresh ()
@@ -145,6 +157,31 @@ public class HexGrid : MonoBehaviour
 
     }
 
-     
+    public void AddUnit (HexUnit unit, HexCell location, float orientation)
+    {
+        units.Add(unit);
 
+        unit.transform.SetParent(transform, false);
+        unit.Location = location;
+        unit.Orientation = orientation;
+    }
+
+    public void RemoveUnit (HexUnit unit)
+    {
+        units.Remove(unit);
+        unit.Die();
+    }
+
+    public HexUnit getUnit (int index)
+    {
+        return units[index];
+    }
+
+    public void MakeMoves()
+    {
+        for (int i = 0; i < units.Count; i++)
+        {
+            units[i].MakeMove();
+        }
+    }
 }

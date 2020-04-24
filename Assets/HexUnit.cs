@@ -3,7 +3,23 @@ using UnityEngine;
 
 public class HexUnit : MonoBehaviour
 {
-public HexCell Location
+    public Vector3 Position
+    {
+        get
+        {
+            return position;
+        }
+        set
+        {
+            position = value;
+            transform.localPosition = position;
+        }
+
+    }
+
+    Vector3 position;
+
+    public HexCell Location
     {
         get
         {
@@ -12,12 +28,15 @@ public HexCell Location
         set
         {
             location = value;
-            value.Unit = this;
-            transform.localPosition = value.Position;
+            Position = value.Position;
+            value.UnitEnters(this);
+            
         }
     }
 
     HexCell location;
+
+
 
     public float Orientation
     {
@@ -38,29 +57,48 @@ public HexCell Location
     {
         switch (index)
         {
-            case 5:
+            case 1:
                 Debug.Log("Case 0");
                 break;
 
-            case 0:
+            case 2:
                 Debug.Log("Case 1");
-                transform.localPosition = 
+                transform.localPosition =
                     new Vector3(location.Position.x, location.Position.y, location.Position.z + 4);
+                position = transform.localPosition;
                 break;
-            case 1:
+            case 3:
                 Debug.Log("Case 2");
                 transform.localPosition =
                     new Vector3(location.Position.x+4, location.Position.y, location.Position.z);
+                position = transform.localPosition;
                 break;
-            case 2:
+            case 4:
                 transform.localPosition =
                     new Vector3(location.Position.x, location.Position.y, location.Position.z - 4);
+                position = transform.localPosition;
                 break;
-            case 3:
+            case 5:
                 transform.localPosition =
                     new Vector3(location.Position.x-4, location.Position.y, location.Position.z);
+                position = transform.localPosition;
                 break;
         }
 
+    }
+
+    public void Die()
+    {
+        location.UnitLeaves(this);
+        Destroy(gameObject);
+    }
+    public void MakeMove()
+    {
+        HexDirection direction = (HexDirection)Random.Range(0, 6);
+        if (location.GetNeighbor(direction) != null)
+        {
+            location.UnitLeaves(this);
+            Location = location.GetNeighbor(direction);
+        }
     }
 }

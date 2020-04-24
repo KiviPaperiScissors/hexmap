@@ -10,24 +10,47 @@ public class HexCell : MonoBehaviour
     public Vector3 worldPosition;
 
     public List<HexUnit> units;
-    public HexUnit Unit
-    {
-        get { return Unit; }
+    /*  public HexUnit Unit
+      {
+          get { return Unit; }
 
-        set
+          set
+          {
+              units.Add(value);
+              if (units.Count > 1)
+              {
+                  Debug.Log("Units in List:" + units.Count);
+                  for (var i = 0; i < units.Count; i++)
+                  {
+                      units[i].OffsetLocation(i);
+                  }
+              }
+
+          }
+      }
+      */
+
+    int unitsInCell;
+
+    public void UnitEnters(HexUnit unit)
+    {
+        unitsInCell++;
+        Debug.Log("Units in cell count: " + unitsInCell);
+        unit.OffsetLocation(unitsInCell);
+        units.Add(unit);
+
+    }
+
+    public void UnitLeaves(HexUnit unit)
+    {
+        unitsInCell--;
+        units.Remove(unit);
+        for (var i = 1; i <= units.Count; i++)
         {
-            units.Add(value);
-            if (units.Count > 1)
-            {
-                Debug.Log("Units in List:" + units.Count);
-                for (var i = 0; i < units.Count; i++)
-                {
-                    units[i].OffsetLocation(i);
-                }
-            }
-            
+            units[i-1].OffsetLocation(i);
         }
     }
+
 
     public Vector3 Position
     {
