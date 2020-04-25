@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("opp",["Function"],[["Opposite",,[["HexDirectionExtensions",,,,0,"File:HexDirection.cs:HexDirectionExtensions.Opposite","CSharpClass:HexDirectionExtensions:Opposite"]]]]);

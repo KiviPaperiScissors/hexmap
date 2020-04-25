@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("cor",["Variable"],[["corners",,[["HexMetrics",,,,0,"File:HexMetrics.cs:HexMetrics.corners","CSharpClass:HexMetrics:corners"]]]]);

@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("cur",["Variable"],[["currentCell",,[["HexMapEditor",,,,0,"File:HexMapEditor.cs:HexMapEditor.currentCell","CSharpClass:HexMapEditor:currentCell"]]]]);

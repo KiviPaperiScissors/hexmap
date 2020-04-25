@@ -1,0 +1,1 @@
+NDFramePage.OnPageTitleLoaded("CSharpClass:PointOfInterest","PointOfInterest");NDSummary.OnSummaryLoaded("CSharpClass:PointOfInterest",[["C#","CSharp"]],[["Classes","Class"]],[[42,0,0,"PointOfInterest"]]);

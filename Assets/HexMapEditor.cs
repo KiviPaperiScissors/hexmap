@@ -2,11 +2,25 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+// Class: HexMapEditor
+// This class is the de facto UI class of the project at this point
+// It contains the UI canvas, as well as the functionality for the map editor
+// and progressing the turn.
+
+
 public class HexMapEditor : MonoBehaviour
 {
+    // Variable: colors
+    //  This array contains all the possible colors we can use for coloring hexes.
     public Color[] colors;
 
+
+    // Variable: hexGrid
+    // A reference to the grid.
     public HexGrid hexGrid;
+
+    // Variable: unitPrefab
+    // A reference to the prefab of the generic unit game object
 
     public HexUnit unitPrefab; 
 
@@ -114,6 +128,10 @@ public class HexMapEditor : MonoBehaviour
      //    hexGrid.Refresh();
     }
 
+    // Function SelectColor
+    // This function is linked to the color picker, allowing the user to choose
+    // the active color for the "brush" to paint cells.
+
     public void SelectColor (int index)
     {
         applyColor = index >= 0;
@@ -130,6 +148,10 @@ public class HexMapEditor : MonoBehaviour
         Debug.Log("Build Town set to" + toggle);
         buildTown = toggle;
     }
+
+    // Function: SetEditMode
+    // This toggle turns editing mode on or off. It is currently not connected to
+    // the toggle button on the scene.
 
     public void SetEditMode (bool toggle)
     {
@@ -148,7 +170,9 @@ public class HexMapEditor : MonoBehaviour
         return false;
     }
 
-  
+  // Function: AdvanceTurn
+  // This method runs the simulation logic for one cycle. Currently this logic
+  // only contains a random move for all existing units.
     public void AdvanceTurn()
     {
         hexGrid.MakeMoves();

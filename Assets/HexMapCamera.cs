@@ -1,5 +1,7 @@
 ﻿
 using UnityEngine;
+// Class: HexMapCamera
+// This class controls camera movement on the scene.
 
 public class HexMapCamera : MonoBehaviour
 {

@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("edi",["Function"],[["EditCell",,[["HexMapEditor",,,,0,"File:HexMapEditor.cs:HexMapEditor.EditCell","CSharpClass:HexMapEditor:EditCell"]]]]);

@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("pos",["Variable"],[["Position",,[["HexUnit","position",,,0,"File:HexUnit.cs:HexUnit.position","CSharpClass:HexUnit:position"],["HexCell",,,,0,"File:HexCell.cs:HexCell.Position","CSharpClass:HexCell:Position"],["HexUnit",,,,0,"File:HexUnit.cs:HexUnit.Position","CSharpClass:HexUnit:Position"]]]]);

@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("inn",["Constant"],[["innerRadius",,[["HexMetrics",,,,0,"File:HexMetrics.cs:HexMetrics.innerRadius","CSharpClass:HexMetrics:innerRadius"]]]]);

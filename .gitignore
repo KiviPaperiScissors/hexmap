@@ -78,6 +78,9 @@ ehthumbs_vista.db
 # Dump file
 *.stackdump
 
+# NDConfig
+/NDConfig/*
+
 # Folder config file
 [Dd]esktop.ini
 

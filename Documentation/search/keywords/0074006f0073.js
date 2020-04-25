@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("tos",["Function"],[["ToString",,[["HexCoordinates",,,,0,"File:HexCoordinates.cs:HexCoordinates.ToString","CSharpClass:HexCoordinates:ToString"]]],["ToStringOnSeparateLines",,[["HexCoordinates",,,,0,"File:HexCoordinates.cs:HexCoordinates.ToStringOnSeparateLines","CSharpClass:HexCoordinates:ToStringOnSeparateLines"]]]]);

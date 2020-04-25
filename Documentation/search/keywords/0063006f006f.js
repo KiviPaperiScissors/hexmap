@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("coo",["Variable"],[["coordinates",,[["HexCell",,,,0,"File:HexCell.cs:HexCell.coordinates","CSharpClass:HexCell:coordinates"]]]]);

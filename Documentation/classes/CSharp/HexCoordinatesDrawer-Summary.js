@@ -1,0 +1,1 @@
+NDFramePage.OnPageTitleLoaded("CSharpClass:HexCoordinatesDrawer","HexCoordinatesDrawer");NDSummary.OnSummaryLoaded("CSharpClass:HexCoordinatesDrawer",[["C#","CSharp"]],[["Classes","Class"],["Functions","Function"],["Groups","Group"]],[[1,0,0,"HexCoordinatesDrawer"],[2,0,2,"Functions","Functions"],[3,0,1,"OnGUI","OnGUI"]]);

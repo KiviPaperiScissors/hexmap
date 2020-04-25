@@ -1,0 +1,1 @@
+NDContentPage.OnToolTipsLoaded({144:"<div class=\"NDToolTip TEnumeration LCSharp\"><div id=\"NDPrototype144\" class=\"NDPrototype NoParameterForm\"><span class=\"SHKeyword\">public enum</span> HexDirection</div><div class=\"TTSummary\">The edges of a hexagon.</div></div>"});

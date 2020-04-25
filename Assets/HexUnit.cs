@@ -1,8 +1,14 @@
 ﻿
 using UnityEngine;
 
+// Class: HexUnit
+// This class defines the qualities of a generic unit.
+
 public class HexUnit : MonoBehaviour
 {
+    // Variable: Position
+    // This variable relates the position of the unit's transform.
+
     public Vector3 Position
     {
         get
@@ -18,6 +24,10 @@ public class HexUnit : MonoBehaviour
     }
 
     Vector3 position;
+
+
+    // Variable: Location
+    // This variable relates to the cell in which the unit is currently in.
 
     public HexCell Location
     {
@@ -37,6 +47,8 @@ public class HexUnit : MonoBehaviour
     HexCell location;
 
 
+    // Variable: Orientation
+    // This variable determines the orientation of the unit. Purely cosmetic.
 
     public float Orientation
     {
@@ -52,6 +64,13 @@ public class HexUnit : MonoBehaviour
     }
 
     float orientation;
+
+    /* Function: OffsetLocation
+     * 
+     * This function moves the unit in a cell to accomodate multiple units
+     * in the same cell without overlapping. 
+     * 
+     */
 
     public void OffsetLocation(int index)
     {
@@ -87,11 +106,18 @@ public class HexUnit : MonoBehaviour
 
     }
 
+    // Function: Die
+    // Destroys a unit game object.
+
     public void Die()
     {
         location.UnitLeaves(this);
         Destroy(gameObject);
     }
+
+    // Function: MakeMove
+    // Moves the unit. 
+
     public void MakeMove()
     {
         HexDirection direction = (HexDirection)Random.Range(0, 6);

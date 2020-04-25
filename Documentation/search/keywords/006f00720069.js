@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("ori",["Variable"],[["Orientation",,[["HexUnit","orientation",,,0,"File:HexUnit.cs:HexUnit.orientation","CSharpClass:HexUnit:orientation"],["HexUnit",,,,0,"File:HexUnit.cs:HexUnit.Orientation","CSharpClass:HexUnit:Orientation"]]]]);

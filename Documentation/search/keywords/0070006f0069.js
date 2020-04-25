@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("poi",["Class"],[["PointOfInterest",,[[,,,,0,"File:PointOfInterest.cs:PointOfInterest","CSharpClass:PointOfInterest"]]]]);

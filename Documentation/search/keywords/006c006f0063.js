@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("loc",["Variable"],[["Location",,[["HexUnit","location",,,0,"File:HexUnit.cs:HexUnit.location","CSharpClass:HexUnit:location"],["HexUnit",,,,0,"File:HexUnit.cs:HexUnit.Location","CSharpClass:HexUnit:Location"]]]]);

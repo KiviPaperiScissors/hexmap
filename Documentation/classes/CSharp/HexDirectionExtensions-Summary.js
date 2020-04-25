@@ -1,0 +1,1 @@
+NDFramePage.OnPageTitleLoaded("CSharpClass:HexDirectionExtensions","HexDirectionExtensions");NDSummary.OnSummaryLoaded("CSharpClass:HexDirectionExtensions",[["C#","CSharp"]],[["Classes","Class"],["Functions","Function"],["Groups","Group"]],[[151,0,0,"HexDirectionExtensions"],[152,0,2,"Functions","Functions"],[153,0,1,"Opposite","Opposite"]]);

@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("out",["Constant"],[["outerRadius",,[["HexMetrics",,,,0,"File:HexMetrics.cs:HexMetrics.outerRadius","CSharpClass:HexMetrics:outerRadius"]]]]);

@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("rem",["Function"],[["RemoveTown",,[["HexCell",,,,0,"File:HexCell.cs:HexCell.RemoveTown","CSharpClass:HexCell:RemoveTown"]]],["RemoveUnit",,[["HexGrid",,,,0,"File:HexGrid.cs:HexGrid.RemoveUnit","CSharpClass:HexGrid:RemoveUnit"]]]]);

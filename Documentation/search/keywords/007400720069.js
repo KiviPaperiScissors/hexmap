@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("tri",["Variable","Function"],[["triangles",,[["HexMesh",,,,0,"File:HexMesh.cs:HexMesh.triangles","CSharpClass:HexMesh:triangles"]]],["Triangulate",,[["HexMesh",,,,1,"File:HexMesh.cs:HexMesh.Triangulate","CSharpClass:HexMesh:Triangulate"]]]]);

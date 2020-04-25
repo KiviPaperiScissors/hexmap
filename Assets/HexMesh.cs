@@ -1,10 +1,16 @@
-﻿using System.Collections.Generic;
+﻿// Class: HexMesh
+// A mesh that will hold our HexGrid. 
+
+
+
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 
 public class HexMesh : MonoBehaviour
 {
+
     Mesh hexMesh;
     static List<Vector3> vertices = new List<Vector3>();
     static List<int> triangles = new List<int>(); 
@@ -21,6 +27,11 @@ public class HexMesh : MonoBehaviour
         //triangles = new List<int>();
     }
 
+
+    // Function: Triangulate
+    // Receives an array of cells from HexGridChunk, and passes it to another Triangulate
+    // method, which creates a hexagon out of 6 triangles. 
+
     public void Triangulate(HexCell[] cells)
     {
         hexMesh.Clear();
@@ -36,6 +47,9 @@ public class HexMesh : MonoBehaviour
         hexMesh.RecalculateNormals();
         meshCollider.sharedMesh = hexMesh;
     }
+
+    // Function: AddTriangle
+    // Provide Triangulate with triangels for the creation of hexagons.
 
     void AddTriangle (Vector3 v1, Vector3 v2, Vector3 v3)
     {
@@ -63,6 +77,9 @@ public class HexMesh : MonoBehaviour
             AddTriangleColor(cell.Color);
         }
     }
+
+    // Function: AddTriangleColor
+    // Colors the triangle.
 
     void AddTriangleColor (Color color)
     {

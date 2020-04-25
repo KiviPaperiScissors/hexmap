@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("x",["Variable","Property"],[["x",,[["HexCoordinates",,,,0,"File:HexCoordinates.cs:HexCoordinates.x","CSharpClass:HexCoordinates:x"],["HexCoordinates","X",,,1,"File:HexCoordinates.cs:HexCoordinates.X","CSharpClass:HexCoordinates:X"]]]]);

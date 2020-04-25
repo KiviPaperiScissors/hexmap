@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("die",["Function"],[["Die",,[["HexUnit",,,,0,"File:HexUnit.cs:HexUnit.Die","CSharpClass:HexUnit:Die"]]]]);

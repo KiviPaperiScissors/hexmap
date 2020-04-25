@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("fro",["Function"],[["FromOffsetCoordinates",,[["HexCoordinates",,,,0,"File:HexCoordinates.cs:HexCoordinates.FromOffsetCoordinates","CSharpClass:HexCoordinates:FromOffsetCoordinates"]]],["FromPosition",,[["HexCoordinates",,,,0,"File:HexCoordinates.cs:HexCoordinates.FromPosition","CSharpClass:HexCoordinates:FromPosition"]]]]);

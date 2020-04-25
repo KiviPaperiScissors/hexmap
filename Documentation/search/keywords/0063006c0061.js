@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("cla",["Function"],[["ClampPosition",,[["HexMapCamera",,,,0,"File:HexMapCamera.cs:HexMapCamera.ClampPosition","CSharpClass:HexMapCamera:ClampPosition"]]]]);

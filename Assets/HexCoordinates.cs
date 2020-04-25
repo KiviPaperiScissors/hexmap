@@ -2,6 +2,10 @@
 using UnityEngine;
 
 [System.Serializable]
+
+// Struct: HexCoordinates
+// This struct defines the coordinates (x,y,z) in the hex grid. As the third coordinate
+// in the grid is derived from the other two, only two variables need to be given.
 public struct HexCoordinates
 {
     [SerializeField]
@@ -32,12 +36,13 @@ public struct HexCoordinates
         }
     }
     
-
     public HexCoordinates (int x, int z)
     {
         this.x = x;
         this.z = z;
     }
+
+    
 
     public static HexCoordinates FromOffsetCoordinates (int x, int z)
     {
@@ -53,6 +58,9 @@ public struct HexCoordinates
     {
         return X.ToString() + "\n" + Y.ToString() + "\n" + Z.ToString();
     }
+
+    // Function: FromPosition
+    // This function returns the coordinates of a certain position in the worldspace.
 
     public static HexCoordinates FromPosition (Vector3 position)
     {

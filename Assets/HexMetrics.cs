@@ -1,6 +1,9 @@
 ﻿
 using UnityEngine;
 
+// Class: HexMetrics
+// This class provides the basic characteristics for the hexagons in the hexgrid.
+
 public static class HexMetrics
 {
     public const float outerRadius = 10f;

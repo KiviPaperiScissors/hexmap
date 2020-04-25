@@ -1,11 +1,20 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
 
+//Class: HexGridChunk
+//
+// This class describes the chunks that hold meshes and cells in our hex grid.
+
+
+
 public class HexGridChunk : MonoBehaviour
 {
     HexCell[] cells;
 
     HexMesh hexMesh;
+
+    // Varíable: GridCanvas
+    // A reference to the canvas of the hex grid.
 
     public Canvas GridCanvas
     {
@@ -34,6 +43,18 @@ public class HexGridChunk : MonoBehaviour
         hexMesh.Triangulate(cells);
     }
 
+    /* 
+     * Function: AddCell
+     * 
+     * This function adds a cell to a chunk.
+     * 
+     * Parameters: 
+     * 
+     *  index - the index of the cell in the cell array.
+     *  cell - the created cell to be added.
+     *  
+     */
+
     public void AddCell(int index, HexCell cell)
     {
         cells[index] = cell;
@@ -52,11 +73,16 @@ public class HexGridChunk : MonoBehaviour
         icon.rectTransform.SetParent(gridCanvas.transform, true);
 
     }
-    */
+    
     public void RemoveIcon(HexCell cell)
     {
 
     }
+    */
+
+    // Function: Refresh
+    //
+    // This function retriangulates the cells in the chunk's mesh.
 
     public void Refresh()
     {

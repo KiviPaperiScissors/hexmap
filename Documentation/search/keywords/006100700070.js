@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("app",["Variable"],[["applyColor",,[["HexMapEditor",,,,0,"File:HexMapEditor.cs:HexMapEditor.applyColor","CSharpClass:HexMapEditor:applyColor"]]]]);

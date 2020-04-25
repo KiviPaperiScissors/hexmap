@@ -1,6 +1,9 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
+// Class: HexCoordinatesDrawer
+// This custom property drawer shows the coordinates of a cell in the unity inspector.
+
 [CustomPropertyDrawer(typeof(HexCoordinates))]
 public class HexCoordinatesDrawer : PropertyDrawer
 {

@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("rot",["Variable"],[["rotationAngle",,[["HexMapCamera",,,,0,"File:HexMapCamera.cs:HexMapCamera.rotationAngle","CSharpClass:HexMapCamera:rotationAngle"]]],["rotationSpeed",,[["HexMapCamera",,,,0,"File:HexMapCamera.cs:HexMapCamera.rotationSpeed","CSharpClass:HexMapCamera:rotationSpeed"]]]]);
